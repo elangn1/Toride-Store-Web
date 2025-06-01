@@ -1,0 +1,17 @@
+body {
+  background-color: #f8f9fa;
+}
+.produk-card {
+  transition: transform 0.3s;
+  height: 100%;
+}
+.produk-card:hover {
+  transform: scale(1.02);
+}
+.produk-img {
+  height: 200px;
+  object-fit: cover;
+}
+.btn-beli {
+  width: 100%;
+}

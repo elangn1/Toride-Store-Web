@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Toride スポーツ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm text-end"
+      id="bg-navbar"
+    >
+      <div class="container">
+        <svg
+          width="320"
+          height="120"
+          viewBox="0 0 320 120"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="60" cy="60" r="40" class="circle" />
+          <text x="120" y="60" class="toride">トリデ</text>
+          <text x="120" y="90" class="supotsu">スポーツ</text>
+        </svg>
+
+        <a class="navbar-brand" href="#"><strong>Toride Store</strong></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="search-form" onsubmit="return false;">
+            <input
+              id="searchInput"
+              class="form-control me-1"
+              type="search"
+              placeholder="Cari Produk . . ."
+            />
+            <button type="submit" class="btn btn-dark">
+              <i class="bi bi-search"></i> Cari
+            </button>
+          </form>
+          <ul class="navbar-nav ms-auto" id="authNav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item d-none" id="nav-chart">
+              <a class="nav-link position-relative" href="cart.html">
+                <i class="bi bi-cart3"></i> Chart
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cartCountBadge"
+                  style="font-size: 0.7rem"
+                >
+                  0
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tentang-kami">Tentang Kami</a>
+            </li>
+            <li class="nav-item" id="nav-daftar">
+              <a class="nav-link" href="register.html">Daftar</a>
+            </li>
+            <li class="nav-item" id="nav-masuk">
+              <a class="nav-link" href="login.html">Masuk</a>
+            </li>
+            <li class="nav-item d-none" id="nav-user">
+              <a class="nav-link" href="editprofile.html">
+                <i class="bi bi-person-circle me-1"></i>
+                <span id="userFullname">User</span>
+              </a>
+            </li>
+            <li class="nav-item d-none" id="nav-logout">
+              <a class="nav-link text-light" href="#" id="logoutBtn">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Hero Section -->
+    <section class="jumbotron rounded-5 bg-light">
+      <div
+        class="container d-flex align-items-center justify-content-between flex-wrap py-5"
+      >
+        <img
+          src="./img/Sepatu basket-1411635454-2048x2048.jpg"
+          alt="Sepatu basket"
+          width="700"
+          class="img-fluid mb-3 mb-md-0 rounded-circle img-thumbnail"
+        />
+        <div class="text-md-start text-center">
+          <h1 class="display-4">Produk terlaris!</h1>
+          <p class="lead">Sepatu dengan kenyamanan dan ketahanan yang baik.</p>
+          <button
+            class="btn btn-danger btn-beli"
+            data-nama="Sepatu Basket"
+            data-harga="3000000"
+          >
+            Beli Sekarang
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Hero Section -->
+
+    <!-- Awal Kategori & Produk -->
+    <section id="kategori-produk" class="py-5">
+      <div class="container">
+        <h3 class="text-center fw-bold mb-5 text-sport section-heading">
+          Produk Kami
+        </h3>
+
+        <!-- Kategori 1: Sepatu -->
+        <div class="mb-5">
+          <h4 class="fw-semibold text-uppercase text-primary mb-4">Sepatu</h4>
+          <div id="section-sepatu" class="row g-4 align-items-stretch gap-4">
+            <!-- Sepatu Lari -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Sepatu lari-864481836-2048x2048.jpg"
+                class="card-img-top"
+                alt="Sepatu Lari"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sepatu Lari</h5>
+                <p class="text-sport fw-bold">Rp750.000</p>
+                <button
+                  class="btn btn-dark btn-beli"
+                  data-nama="Sepatu Lari"
+                  data-harga="750000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+
+            <!-- Sepatu Basket -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Sepatu basket-1411635454-2048x2048.jpg"
+                class="card-img-top"
+                alt="Sepatu Basket"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sepatu Basket</h5>
+                <p>
+                  <strong>Produk Terlaris</strong> <i class="bi bi-fire"></i>
+                </p>
+                <p class="text-sport fw-bold">Rp3.000.000</p>
+                <button
+                  class="btn btn-danger btn-beli"
+                  data-nama="Sepatu Basket"
+                  data-harga="3000000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+
+            <!-- Sepatu Sepak Bola -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Sepatu sepak bola-182780951-1024x1024.jpg"
+                class="card-img-top"
+                alt="Sepatu Sepak Bola"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sepatu Sepak Bola</h5>
+                <p class="text-sport fw-bold">Rp1.600.000</p>
+                <button
+                  class="btn btn-dark btn-beli"
+                  data-nama="Sepatu Sepak Bola"
+                  data-harga="1600000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kategori 2: Set Baju & Celana -->
+        <div class="mb-5">
+          <h4 class="fw-semibold text-uppercase text-primary mb-4">
+            Set Baju & Celana Olahraga
+          </h4>
+          <div id="section-sepatu" class="row g-4 align-items-stretch gap-4">
+            <!-- Set Training Hitam -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Set training hitam.jpg"
+                class="card-img-top w-100 h-100"
+                alt="Set Baju Training 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Set Training Hitam</h5>
+                <p class="text-sport fw-bold">Rp450.000</p>
+                <button
+                  class="btn btn-dark btn-beli"
+                  data-nama="Set Training Hitam"
+                  data-harga="450000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+
+            <!-- Set Baju Bola -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Set baju bola.jpg"
+                class="card-img-top w-100 h-100"
+                alt="Sepatu Basket"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Set Sepak Bola</h5>
+                <p class="text-sport fw-bold">Rp300.000</p>
+                <button
+                  class="btn btn-dark btn-beli"
+                  data-nama="Set Sepak Bola"
+                  data-harga="300000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+
+            <!-- Set Bulu Tangkis -->
+            <div class="col card border-0 w-30">
+              <img
+                src="./img/Set baju bulu tangkis.webp"
+                class="card-img-top img-fluid h-100 w-100"
+                alt="Sepatu Sepak Bola"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Set Bulu Tangkis</h5>
+                <p class="text-sport fw-bold">Rp300.000</p>
+                <button
+                  class="btn btn-dark btn-beli"
+                  data-nama="Set Bulu Tangkis"
+                  data-harga="300000"
+                >
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kategori 3: Alat Olahraga -->
+        <div>
+          <h4 class="fw-semibold text-uppercase text-primary mb-4">
+            Alat Olahraga
+          </h4>
+          <div class="row g-4">
+            <!-- Raket Bulu Tangkis -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0">
+                <img
+                  src="./img/Raket bulu tangkis.jpg"
+                  class="card-img-top"
+                  alt="Raket Bulu Tangkis"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Raket Bulu Tangkis</h5>
+                  <p class="text-sport fw-bold">Rp350.000</p>
+                  <button
+                    class="btn btn-dark btn-beli"
+                    data-nama="Raket Bulu Tangkis"
+                    data-harga="350000"
+                  >
+                    Beli Sekarang
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tongkat Golf -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0">
+                <img
+                  src="./img/Tongkat golf.jpg"
+                  class="card-img-top"
+                  alt="Tongkat Golf"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Tongkat Golf</h5>
+                  <p class="text-sport fw-bold">Rp1.200.000</p>
+                  <button
+                    class="btn btn-dark btn-beli"
+                    data-nama="Tongkat Golf"
+                    data-harga="1200000"
+                  >
+                    Beli Sekarang
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Raket Tenis -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0">
+                <img
+                  src="./img/Raket Tenis.jpg"
+                  class="card-img-top"
+                  alt="Raket Tenis"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Raket Tenis</h5>
+                  <p class="text-sport fw-bold">Rp500.000</p>
+                  <button
+                    class="btn btn-dark btn-beli"
+                    data-nama="Raket Tenis"
+                    data-harga="500000"
+                  >
+                    Beli Sekarang
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Kategori & Produk -->
+
+    <!-- Awal Tentang kami -->
+    <section id="tentang-kami">
+      <div class="container text-center">
+        <h3 class="fw-bold mb-4 section-heading">Siapa Kami?</h3>
+
+        <div class="container text-center mb-3">
+          <img
+            src="./img/team.jpg"
+            class="img-fluid rounded-4 shadow-sm"
+            alt="Tentang Kami"
+          />
+        </div>
+        <p class="mb-3">
+          <strong>Toride スポーツ</strong> adalah toko perlengkapan olahraga
+          dengan fokus pada kualitas dan kenyamanan.
+        </p>
+        <p class="fw-semibold">
+          Kami hadir untuk mendukung semangat Anda dalam berolahraga.
+        </p>
+        <div class="d-flex justify-content-center">
+          <ul class="list-unstyled text-start">
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Misi: Mendukung gaya hidup
+              sehat & aktif
+            </li>
+            <li>
+              <i class="bi bi-check-circle-fill"></i> Visi: Jadi mitra
+              terpercaya olahraga Indonesia
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Tentang kami -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">&copy; 2025 Toride スポーツ. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="./js/produkStorageinjector.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
+<!-- Akhir footer -->
