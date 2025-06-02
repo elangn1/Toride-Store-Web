@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Cek user login
-  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const loggedInUser = JSON.parse(localStorage.getItem("currentUser"));
 
   if (loggedInUser) {
     // Sembunyikan tombol Daftar dan Masuk
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userFullname = document.getElementById("userFullname");
 
     if (navUser && navLogout && userFullname) {
-      userFullname.textContent = loggedInUser.fullname;
+      userFullname.textContent = loggedInUser.userFullname;
       navUser.classList.remove("d-none");
       navLogout.classList.remove("d-none");
     }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (logoutBtn) {
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        localStorage.removeItem("loggedInUser");
+        localStorage.removeItem("currentUser");
         location.reload();
       });
     }
@@ -84,7 +84,7 @@ function updateCartCount() {
 // Event listener semua tombol beli
 // Cek apakah user sudah login
 function isUserLoggedIn() {
-  return localStorage.getItem("loggedInUser") !== null;
+  return localStorage.getItem("currentUser") !== null;
 }
 
 // Event listener tombol beli

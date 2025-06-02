@@ -57,9 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
   produkContainer.addEventListener("click", function (e) {
     if (e.target.classList.contains("btn-beli")) {
       // Cek apakah user sudah login
-      const user = JSON.parse(localStorage.getItem("loggedInUser"));
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      console.log(user)
       if (!user) {
         alert("Silakan login terlebih dahulu untuk membeli produk.");
+        window.location.href = "login.html"; // arahkan ke halaman login
         return;
       }
 
