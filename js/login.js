@@ -43,7 +43,7 @@ function login(loggedIn) {
     if (onlineUser) {
         alert('Login berhasil!');
         setTimeout(() => {
-        location.href = 'index.html'; // Redirect ke halaman utama setelah login
+        location.href = 'index.html'; // Untuk redirect ke halaman utama setelah login
         });
     } else {
         alert('Email atau password anda salah!');

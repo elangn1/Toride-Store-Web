@@ -32,7 +32,6 @@ Berisikan styling dari halaman html
 - Data dari user akan tersimpan ke local storage setelah mendaftar
 
 # Fitur yang masih dalam proses :
-- Fitur Autentifikasi yang meliputi : Daftar/registrasi, Login
 - Fitur Cart
 - Fitur Edit profile user yang sudah terdaftar
 
