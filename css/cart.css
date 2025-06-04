@@ -1,0 +1,69 @@
+:root {
+  --primary: #df183f;
+  --secondary: #f33241;
+  --text-dark: #212529;
+  --bg-neutral: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F5F5F5;
+}
+
+/* Keranjang */
+#cartImage {
+  width: 7rem;
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+
+/* Kartu produk */
+.card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--text-dark);
+}
+
+/* Total & Checkout */
+#totalSection {
+  text-align: center;
+}
+
+#totalHarga {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#checkoutBtn {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#checkoutBtn:hover {
+  background-color: var(--secondary);
+}
+
+/* Kembali Berbelanja */
+#backButton {
+  padding: 0.7rem 1rem;
+  background-color: #222222;
+  color: white;
+  text-decoration: none;
+}
+
+#backButton:hover {
+  background-color: var(--secondary);
+}
