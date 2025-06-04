@@ -17,26 +17,7 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Kartu produk */
-.card img {
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-title {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.card-text {
-  color: var(--text-dark);
-}
-
 /* Total & Checkout */
-#totalSection {
-  text-align: center;
-}
-
 #totalHarga {
   color: var(--primary);
   font-weight: bold;
@@ -62,6 +43,8 @@ body {
   background-color: #222222;
   color: white;
   text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.1s ease;
 }
 
 #backButton:hover {

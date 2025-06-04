@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
       item.kategori.toLowerCase().includes(keyword)
   );
 
+  // console.log(hasilFilter);
+  
   // Jika tidak ada hasil yang cocok, tampilkan pesan
   if (hasilFilter.length === 0) {
     produkContainer.innerHTML = `
@@ -23,8 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     return;
   }
+  
   // Tampilkan setiap produk yang cocok dalam elemen grid Bootstrap
   hasilFilter.forEach((produk) => {
+    // console.log(produk);
+    
     const col = document.createElement("div");
     col.className = "col-md-4 mb-4";
 
@@ -58,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.target.classList.contains("btn-beli")) {
       // Cek apakah user sudah login
       const user = JSON.parse(localStorage.getItem("currentUser"));
-      console.log(user)
+      
       if (!user) {
         alert("Silakan login terlebih dahulu untuk membeli produk.");
         window.location.href = "login.html"; // arahkan ke halaman login

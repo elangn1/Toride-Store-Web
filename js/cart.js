@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return "Rp" + angka.toLocaleString("id-ID");
   }
 
-  let keranjang = JSON.parse(localStorage.getItem("keranjang")) || [];
+  let keranjang = JSON.parse(localStorage.getItem("keranjang")) || []; // Ambil data keranjang dari localStorage. Jika belum ada, pakai array kosong. Ubah string JSON menjadi array.
 
   function renderCart() {
     cartBody.innerHTML = "";
@@ -65,15 +65,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Semua event dalam satu listener
   cartBody.addEventListener("click", function (e) {
-    const index = parseInt(e.target.dataset.index);
+    const index = parseInt(e.target.dataset.index); // Ambil nilai data-index dari elemen HTML yang diklik dan ubah menjadi angka.
     if (isNaN(index)) return;
 
     if (e.target.classList.contains("btn-kurang")) {
-      keranjang[index].jumlah = Math.max(1, keranjang[index].jumlah - 1);
+      keranjang[index].jumlah = Math.max(1, keranjang[index].jumlah - 1); //Menurunkan nilai jumlah pada item keranjang tertentu (berdasarkan index), tetapi tidak boleh kurang dari 1. Membandingkan yang lebih besar.
     } else if (e.target.classList.contains("btn-tambah")) {
       keranjang[index].jumlah += 1;
     } else if (e.target.classList.contains("btn-hapus")) {
-      keranjang.splice(index, 1);
+      keranjang.splice(index, 1); // Menghapus 1 element dari index
     }
 
     localStorage.setItem("keranjang", JSON.stringify(keranjang));

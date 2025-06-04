@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
       logoutBtn.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.removeItem("currentUser");
+        localStorage.removeItem("namaLengkap");
+        localStorage.removeItem("username");
+        localStorage.setItem("loginStatus", JSON.stringify(false));
         location.reload();
       });
     }
