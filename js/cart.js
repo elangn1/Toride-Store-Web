@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <td>${formatRupiah(item.harga)}</td>
         <td>${formatRupiah(subtotal)}</td>
         <td>
-          <button class="btn btn-sm btn-danger btn-hapus" data-index="${i}">Hapus Semua</button>
+          <button class="btn btn-sm btn-danger btn-hapus" data-index="${i}">Hapus Barang</button>
         </td>
       `;
       cartBody.appendChild(row);
@@ -73,7 +73,13 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (e.target.classList.contains("btn-tambah")) {
       keranjang[index].jumlah += 1;
     } else if (e.target.classList.contains("btn-hapus")) {
-      keranjang.splice(index, 1); // Menghapus 1 element dari index
+      const namaProduk = keranjang[index].nama;
+      const yakin = confirm(`Apakah Anda yakin ingin menghapus "${namaProduk}" dari keranjang?`);
+      if (yakin) {
+        keranjang.splice(index, 1);
+      } else {
+        return; // Kalau batal, jangan lanjut ke simpan & render
+      }
     }
 
     localStorage.setItem("keranjang", JSON.stringify(keranjang));
