@@ -31,8 +31,4 @@ Berisikan styling dari halaman html
 - Jika user ingin mendaftar ke web maka bisa klik tombol daftar dan akan langsung berpindah ke halaman register
 - Data dari user akan tersimpan ke local storage setelah mendaftar
 
-# Fitur yang masih dalam proses :
-- Fitur Cart
-- Fitur Edit profile user yang sudah terdaftar
-
 # GANBARE GUUUSSS
